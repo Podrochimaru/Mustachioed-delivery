@@ -6,7 +6,7 @@ public class Movement : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D _rigidbody;
     private float _speed = 6.0f;
-    private float _jumpPower = 20.0f;
+    private float _jumpPower = 18.0f;
     private bool _onGround = true;
     private float _movevar;
 
