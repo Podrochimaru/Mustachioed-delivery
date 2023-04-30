@@ -9,6 +9,8 @@ public class Movement : MonoBehaviour
     private float _jumpPower = 18.0f;
     private bool _onGround = true;
     private float _movevar;
+    private bool isRight = true;
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -26,6 +28,7 @@ public class Movement : MonoBehaviour
     {
         Move();
         Jump();
+        Turn();
     }
     void Move()
     {
@@ -54,5 +57,15 @@ public class Movement : MonoBehaviour
             _rigidbody.AddForce(Vector2.up * _jumpPower, ForceMode2D.Impulse);
         }
         
+    }
+    void Turn()
+    {
+        if (isRight && _movevar < 0f || !isRight && _movevar > 0f)
+        {
+            isRight = !isRight;
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
+        }
     }
 }
