@@ -30,17 +30,17 @@ public class Movement : MonoBehaviour
     void Move()
     {
         _movevar = Input.GetAxisRaw("Horizontal");
-        _rigidbody.velocity = new Vector2(_movevar * _speed, _rigidbody.velocity.y);
+        //_rigidbody.velocity = new Vector2(_movevar * _speed, _rigidbody.velocity.y);
 
-        //if (Input.GetKey(KeyCode.D))
-        //{
-        //    _rigidbody.velocity = new Vector2(_speed, _rigidbody.velocity.y);
-        //}
-        //else if (Input.GetKey(KeyCode.A))
-        //{
+        if (Input.GetKey(KeyCode.D))
+        {
+            _rigidbody.velocity = new Vector2(_speed, _rigidbody.velocity.y);
+        }
+        else if (Input.GetKey(KeyCode.A))
+        {
 
-        //    _rigidbody.velocity = new Vector2(-_speed, _rigidbody.velocity.y);
-        //}
+            _rigidbody.velocity = new Vector2(-_speed, _rigidbody.velocity.y);
+        }
 
     }
     void Jump()
