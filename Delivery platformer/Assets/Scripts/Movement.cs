@@ -4,18 +4,21 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    [SerializeField] private Rigidbody2D _rigidbody;
     private float _speed = 6.0f;
     private float _jumpPower = 18.0f;
     private bool _onGround = true;
     private float _movevar;
     private bool isRight = true;
-    [SerializeField] private Animator _anim;
 
+    [SerializeField] private Rigidbody2D _rigidbody;
+    [SerializeField] private Animator _anim;
+    [SerializeField] private AudioSource _jumpsound;
+    [SerializeField] private AudioSource _fallsound;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         _onGround = true;
+        _fallsound.Play();
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
@@ -54,7 +57,9 @@ public class Movement : MonoBehaviour
         {
             _rigidbody.AddForce(Vector2.up * _jumpPower, ForceMode2D.Impulse);
             _anim.Play("Jump");
+            _jumpsound.Play();
         }
+       
         
     }
     void Turn()
