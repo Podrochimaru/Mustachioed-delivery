@@ -43,18 +43,19 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             _rigidbody.velocity = new Vector2(_speed, _rigidbody.velocity.y);
+            _anim.Play("Walk");
         }
         else if (Input.GetKey(KeyCode.A))
         {
-
             _rigidbody.velocity = new Vector2(-_speed, _rigidbody.velocity.y);
+            _anim.Play("Walk");
         }
-
     }
     void Jump()
     {
         if (Input.GetKeyDown(KeyCode.Space) && _onGround)
         {
+            
             _rigidbody.AddForce(Vector2.up * _jumpPower, ForceMode2D.Impulse);
             _anim.Play("Jump");
             _jumpsound.Play();
