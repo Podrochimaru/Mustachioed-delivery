@@ -382,6 +382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 367978114}
+  _anim: {fileID: 367978116}
 --- !u!95 &367978116
 Animator:
   serializedVersion: 5
