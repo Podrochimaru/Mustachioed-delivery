@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5769712603456230860}
   - component: {fileID: 7199537207631213819}
   - component: {fileID: 7895485407960071261}
+  - component: {fileID: 1236953129398165811}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -153,6 +154,7 @@ MonoBehaviour:
   _anim: {fileID: 5769712603456230860}
   _jumpsound: {fileID: 7199537207631213819}
   _fallsound: {fileID: 7895485407960071261}
+  _pause: {fileID: 0}
 --- !u!95 &5769712603456230860
 Animator:
   serializedVersion: 5
@@ -365,3 +367,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1236953129398165811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5769712603456230710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a8d98cc15bed7f439c5b25a129b647b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
