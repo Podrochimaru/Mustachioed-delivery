@@ -10,6 +10,7 @@ public class Movement : MonoBehaviour
     private bool _onGround = true;
     private float _movevar;
     private bool isRight = true;
+    [SerializeField] private Animator _anim;
 
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -29,6 +30,7 @@ public class Movement : MonoBehaviour
         Move();
         Jump();
         Turn();
+        AirCheck();
     }
     void Move()
     {
@@ -51,10 +53,7 @@ public class Movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && _onGround)
         {
             _rigidbody.AddForce(Vector2.up * _jumpPower, ForceMode2D.Impulse);
-        }
-        else if (Input.GetKeyDown(KeyCode.Space) && _onGround)
-        {
-            _rigidbody.AddForce(Vector2.up * _jumpPower, ForceMode2D.Impulse);
+            _anim.Play("Jump");
         }
         
     }
@@ -66,6 +65,13 @@ public class Movement : MonoBehaviour
             Vector3 localScale = transform.localScale;
             localScale.x *= -1f;
             transform.localScale = localScale;
+        }
+    }
+    void AirCheck()
+    {
+        if (_rigidbody.transform.position.y < -30f)
+        {
+            _rigidbody.transform.position = new Vector2(-7.76999998f, -0.579999924f);
         }
     }
 }
