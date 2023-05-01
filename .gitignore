@@ -1,13 +1,14 @@
 ###
 # Unity folders and files
 ###
-[Aa]ssets/AssetStoreTools*
-[Bb]uild/
-[Ll]ibrary/
-[Ll]ocal[Cc]ache/
-[Oo]bj/
-[Tt]emp/
-[Uu]nityGenerated/
+Delivery platformer/[Aa]ssets/AssetStoreTools*
+Delivery platformer/[Bb]uild/
+Delivery platformer/[Ll]ibrary/
+Delivery platformer/[Ll]ocal[Cc]ache/
+Delivery platformer/[Oo]bj/
+Delivery platformer/[Tt]emp/
+Delivery platformer/[Uu]nityGenerated/
+Delivery platformer/[Ll]ogs/
 # file on crash reports
 sysinfo.txt
 # Unity3D generated meta files
