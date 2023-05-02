@@ -82,7 +82,7 @@ public class Movement : MonoBehaviour
             _rigidbody.transform.position = new Vector2(-7.76999998f, -0.579999924f);
         }
     }
-    void Pause()
+    public void Pause()
     {
         if (Input.GetKeyDown(KeyCode.Escape) && _isPaused == false)
         {
